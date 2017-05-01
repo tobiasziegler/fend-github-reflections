@@ -10,3 +10,40 @@ repository? What value do you think it offers?
 	The staging area has a transient state that is used as the intermediate
 	stage of turning changes within the working directory into commit records
 	in the repository.
+
+How can you use the staging area to make sure you have one commit per logical
+change?
+
+	You can add only the files relating to one logical change to the staging
+	area, review the changes using diffs and then commit them.
+
+What are some situations when branches would be helpful in keeping your history
+organized? How would branches help?
+
+	When you're developing a new feature or experimenting with something that
+	is not part of the main development path of the project (at this stage)
+	then branches would help by providing a separate line of version history
+	that can be developed with more commits, but which allows easy switching
+	back to the master branch as well as updates to the master branch.
+
+How do the diagrams help you visualize the branch structure?
+
+	Diagrams let you map the history of commits that have been applied to each
+	branch in the repository, seeing where branches have diverged and which
+	changes have been applied along each path.
+
+What is the result of merging two branches together? Why do we represent it in
+the diagram the way we do?
+
+	The result is that all of the changes made in both branches are reflected
+	at the merge commit, and all commits along both branches will be available
+	in the history of the branch that was merged into.
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges
+manually?
+
+	Git's automatic merging allows different lines of work, whether by the same
+	person or multiple people, to be combined whenever it's unambiguous how the
+	content should be merged, which is efficient and promotes collaboration and
+	experimentation. I'm not sure what the cons might be unless there are times
+	when it can automatically make merges that will turn out to be problematic?
