@@ -5,3 +5,55 @@ When would you want to use a remote repository rather than keeping all your work
     your code being stored only on a single device, which is useful if you work at multiple computers or just if you want to
     avoid the risk of losing the project if the local files or computer are lost or damaged (although having a broader backup
     strategy for your local data is important anyway).
+
+Why might you want to always pull changes manually rather than having Git
+automatically stay up-to-date with your remote repository?
+
+    There might be changes that have been made in the remote repository, e.g.,
+    commits or a merged branch, that conflict with what you're working on. Just
+    as merge conflicts need to be handled manually, it's better to avoid
+    automatic updates that might create problems with your work.
+
+Describe the differences between forks, clones, and branches. When would you
+use one instead of another?
+
+    Branches are for different streams of development within the same project,
+    e.g., working on different features but with the intention that the work
+    should all remain integrated. Cloning allows you to duplicate a repository
+    in a new location and maintain a link so that changes can be transmitted --
+    this would most commonly be used to have a remote and a local repository,
+    which will be synchronised as appropriate. Forking is most appropriate for
+    taking an existing project, often developed or maintained by somebody else,
+    and establishing a new repository that has its code as a base but can now
+    be developed independently, while acknowledging the source of the original
+    work.
+
+What is the benefit of having a copy of the last known state of the remote
+stored locally?
+
+    Having the last known state of the remote stored locally means that you can
+    work offline while being able to examine the state of the commit history,
+    and can work to integrate your work with any other changes by merging them.
+
+How would you collaborate without using Git or GitHub? What would be easier,
+and what would be harder?
+
+    Without Git and GitHub, you would have to try to arrange a way to share
+    the files involved in the project in a way that ensures people have access
+    to the changes others have made and can make their own changes available to
+    others. Then, to get code reviewed or request that work be merged into the
+    main codebase, you would need communication methods to discuss and act on
+    feedback -- the pull request feature allows the communication to be
+    directly linked to the relevant code.
+
+When would you want to make changes in a separate branch rather than directly
+in master? What benefits does each approach have?
+
+    Using a separate branch allows ongoing development of a new feature or some
+    other changes that can be pushed to a remote repository and shared with
+    others, but which at the same time doesn't inject it into the main branch
+    that people are working with in other ways. That allows parallel lines of
+    work to take place and people involved in the project have control over
+    which parts they want to work on, with decisions about when something is
+    ready to be incorporated into the master branch able to be dealt with in a
+    deliberate and well-structured way, especially with pull requests involved.
